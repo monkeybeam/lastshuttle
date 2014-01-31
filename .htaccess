@@ -1,0 +1,8 @@
+#redirect mobile browsers
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} ^.*iPhone.*$
+RewriteCond %{REQUEST_URI} !^/mobile
+RewriteRule .* /mobile [R]
+RewriteCond %{HTTP_USER_AGENT} ^.*iPad.*$
+RewriteCond %{REQUEST_URI} !^/ipad
+RewriteRule .* /ipad [R]
